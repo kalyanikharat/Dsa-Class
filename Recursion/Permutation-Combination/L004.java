@@ -257,17 +257,17 @@
             //System.out.println("total permutation:"+myans);
     
             //equalset 
-            int[]arr={10,20,30,40,50,60,70};
+           // int[]arr={10,20,30,40,50,60,70};
             //int result= findsubset(arr,0, 0, 0, "", "");
             //System.out.println("Total Pairs:"+result);
              //unique way non repeated values
-             int res= findsubsetunique(arr,1, arr[0] , 0, arr[0] + "","");
-             System.out.println("Total Pairs:"+res);
+            // int res= findsubsetunique(arr,1, arr[0] , 0, arr[0] + "","");
+             //System.out.println("Total Pairs:"+res);
 
              String str = "abca";
              // permutationstr(str, "");
              permutationstrunique(str, "");
-             permutationstrunique1("abcd", "", '$');
+             //permutationstrunique1("abcd", "", '$');
            
     
         }

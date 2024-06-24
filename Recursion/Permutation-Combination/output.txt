@@ -1,0 +1,12 @@
+abca
+abac
+acba
+acab
+aabc
+aacb
+baca
+baac
+bcaa
+caba
+caab
+cbaa
