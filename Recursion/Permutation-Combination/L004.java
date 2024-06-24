@@ -1,4 +1,4 @@
-public class P001 {
+
     public class L004 {
         public static int permutationinfcoins(int arr[],int tar,String ans){
             if(tar==0){
@@ -169,6 +169,56 @@ public class P001 {
             return count;
      
          }
+          ///permutation on string for "abcd"
+         public static void permutationstr(String str,String ans){
+            if(str.length()==0){
+                System.out.println(ans);
+                return;
+            }
+                  
+            for(int i=0;i<str.length();i++){
+                char ch = str.charAt(i);
+                String myans= str.substring(0, i) + str.substring(i+1);
+                permutationstr(myans,ans+ch);
+    
+            }
+         }
+
+         ///Find the permutation of unique string abcda / aaaa
+     public static void permutationstrunique(String str,String ans){
+        if(str.length()==0){
+            System.out.println(ans);
+            return;
+        }
+         boolean visited[]= new boolean[26];
+           
+        for(int i=0;i<str.length();i++){
+            char ch = str.charAt(i);
+            if(!visited[ch -'a']){
+            visited[ch-'a'] = true;    
+            String myans= str.substring(0, i) + str.substring(i+1);
+            permutationstrunique(myans, ans+ch);
+            
+        }
+
+        }
+     }
+
+      //By different way need to take prev=$ and current =ch
+    public static void permutationstrunique1(String str, String ans, char prev) {
+        if (str.length() == 0) {
+            System.out.println(ans);
+            return;
+        }
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (ch != prev) {
+                String myans = str.substring(0, i) + str.substring(i + 1);
+                permutationstrunique1(myans, ans + ch, ch);
+            }
+        }
+    }
     
         
         public static void main(String args[]){
@@ -213,10 +263,12 @@ public class P001 {
              //unique way non repeated values
              int res= findsubsetunique(arr,1, arr[0] , 0, arr[0] + "","");
              System.out.println("Total Pairs:"+res);
+
+             String str = "abca";
+             // permutationstr(str, "");
+             permutationstrunique(str, "");
+             permutationstrunique1("abcd", "", '$');
            
     
         }
     }
-    
-    
-}

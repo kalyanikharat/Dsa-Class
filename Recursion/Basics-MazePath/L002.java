@@ -343,11 +343,7 @@ public static int totalNumber(ArrayList<Bank> list,String type)
 
 }
 
-
-
-
 }
-
 // total no. of checking account in given bank based on bank name
     
 
